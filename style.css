@@ -1,0 +1,536 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+}
+.background {
+  position: relative;
+  height: 100vh;
+  background-image: url(back.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  animation-name: example;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+
+}
+.welcome:hover {
+  animation-play-state: running; /
+}
+
+.portfolio {
+  position: absolute;
+  top: 10%;
+  left: 0%;
+  font-family: "Poppins", sans-serif;
+  font-size: 70px;
+  color: #e0e5eb;
+  text-shadow: -8px -8px 12px rgba(255, 255, 255, 0.4),
+    8px 8px 12px rgba(0, 0, 0, 0.08);
+  caret-color: #262626;
+}
+.suite {
+  font-size: 150px;
+}
+.port {
+  font-size: 130px;
+}
+.dimension {
+  appearance: none;
+  width: 200px;
+  height: 200px;
+  border-radius: 150px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 21px 21px 42px #9c9c9c, -21px -21px 42px #ffffff;
+  position: absolute;
+  top: 10%;
+}
+.dimension::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+
+  background: url(menu.png);
+  background-size: cover;
+  z-index: 0;
+}
+
+
+.button {
+  position: absolute;
+  transform: translateX(
+    -50%
+  ); /* affiche la div au centre des coordonnées qu'on lui donne */
+  left: 50%; /* positionne la div à 50% de la gauche de la div parent (centre horizontalement la div) */
+  padding: 66px;
+  top: 0px;
+}
+
+.dimension1 {
+  animation-name: slide;
+  
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  /*justify-content: space-between;*/
+  
+
+
+}
+
+.welcome-a1 {
+  position: absolute;
+  top: 3%;
+  right: 58%;
+  width: 100px;
+  height: 100px;
+  border-radius: 150%;
+  box-shadow:  16px 16px 33px #bababa,
+             -16px -16px 33px #ffffff;
+}
+.welcome-a2 {
+  position: absolute;
+  top: 25%;
+  right: 58%;
+  width: 100px;
+  height: 100px;
+  border-radius: 150%;
+  box-shadow:  16px 16px 33px #bababa,
+             -16px -16px 33px #ffffff;
+}
+.welcome-a3 {
+  position: absolute;
+  top: 40%;
+  right: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 150%;
+  box-shadow:  16px 16px 33px #bababa,
+             -16px -16px 33px #ffffff;
+}
+.welcome-input {
+  width: 100px;
+  height: 100px;
+  border-radius: 150%;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.welcome1 {
+  background-image: url("profil.png");
+}
+.welcome2 {
+  background-image: url("galerie.png");
+}
+.welcome3 {
+  background-image: url("video.png");
+}
+
+.fading:active {
+  animation-name: slide;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.dimension1:active {
+  animation-name: slide;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.dimension2:active {
+  animation-name: slide;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+#up{
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  bottom: 50px;
+  right: 50px;
+  color: 88, 59, 195;
+  z-index: 2;
+}
+
+#up img {
+  width: 50px;
+  transition: 0.5s;
+  color: 88, 59, 195;
+}
+
+#up img:hover {
+  transform: scale(125%);
+  color: 88, 59, 195;
+}
+#down{
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  bottom: 50px;
+  left: 50px;
+  color: 88, 59, 195;
+  z-index: 2;
+}
+
+#down img {
+  width: 50px;
+  transition: 0.5s;
+  color: 88, 59, 195;
+}
+
+#down img:hover {
+  transform: scale(125%);
+  color: 88, 59, 195;
+}
+.dimension3 {
+  background-image: url("video.png");
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 150px;
+  box-shadow:  16px 16px 33px #bababa,
+             -16px -16px 33px #ffffff;
+  position: absolute;
+  top: 40%;
+  right: 50%;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  justify-content: space-between;
+  width: 100px;
+  height: 100px;
+}
+
+.dimension3:active {
+  background-image: url("video.png");
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 150px;
+  box-shadow:  16px 16px 33px #bababa,
+             -16px -16px 33px #ffffff;
+  animation-name: slide;
+  position: absolute;
+  top: 40%;
+  right: 50%;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  justify-content: space-between;
+  width: 100px;
+  height: 100px;
+}
+.dimension:checked ~ .dimension3 {
+  opacity: 1;
+}
+.dimension:checked ~ .dimension2 {
+  opacity: 1;
+}
+.dimension:checked ~ .dimension1 {
+  opacity: 1;
+}
+.petitbutton {
+}
+
+@keyframes example {
+  0% {
+    opacity: 100;
+    width: 100vw;
+    height: auto;
+  } /* on laisse quelques secondes avant de commencer l'animation */
+  30% {
+    opacity: 100;
+    width: 100vw;
+    height: auto;
+  } /* on réduit progressivement l'opacité */
+  80% {
+    opacity: 0;
+    width: 100vw;
+    height: auto;
+  }
+  90% {
+    opacity: 0;
+    width: 100vw;
+    height: auto;
+    display: none;
+  } /* on efface totalement la div*/
+  100% {
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    display: none;
+  } /* puis on l'écrase afin de ne pas pouvoir cliquer dessus*/
+}
+
+.about {
+  background-image: url(deux2.png);
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.description {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-size: 35px;
+  color: #e0e5eb;
+  text-shadow: -8px -8px 12px rgba(255, 255, 255, 0.4),
+    8px 8px 12px rgba(0, 0, 0, 0.08);
+  caret-color: #262626;
+font-family: 'Archivo Black', sans-serif;
+ margin-left: 25px;
+}
+
+.profil {
+  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+  top: 0%;
+  left: 0%;
+}
+.photo {
+  background-image: url(blanc.png);
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+.overlay-image {
+  position: relative;
+  width: 100%;
+  display: flex;
+  padding-left: 200px;
+}
+
+.overlay-image .parfum {
+  position: absolute;
+}
+
+.parfum {
+  max-width:  90%;
+  max-height: 90%;
+}
+
+.img1 {
+  z-index: 1;
+  transition: 0.5s ease;
+  top: 10%;
+  box-shadow:  16px 16px 33px #bababa,
+             -16px -16px 33px #ffffff;
+}
+.img2 {
+  z-index: 0;
+  transition: 0.5s ease;
+  top: 10%;
+  box-shadow:  16px 16px 33px #bababa,
+             -16px -16px 33px #ffffff;
+}
+
+.img1:hover {
+  opacity: 0%;
+}
+
+.img3 {
+  z-index: 1;
+  transition: 0.5s;
+  top: 10%;
+}
+.img4 {
+  z-index: 0;
+  transition: 0.5s;
+  top: 10%;
+  box-shadow:  16px 16px 33px #bababa,
+             -16px -16px 33px #ffffff;
+}
+
+.img3:hover {
+  opacity: 0%;
+  box-shadow:  16px 16px 33px #bababa,
+             -16px -16px 33px #ffffff;
+}
+
+
+.overlay-carnavale {
+  position: relative;
+  width: 100%;
+}
+
+.overlay-carnavale img {
+  position: absolute;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.overlay-carnavale .hov {
+  transition: 0.5s ease;
+}
+
+.overlay-carnavale:hover .hov {
+  opacity: 1;
+}
+
+.video {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.inscription{
+
+
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat;  
+}
+.align-center {
+   text-align: center;
+}
+
+
+// Basics
+html {
+   height: 100%;
+}
+body {
+   height: 100%;
+   position: relative;
+}
+
+// Grid
+.row {
+   @include clearfix;
+   margin: -20px 0;
+   .col 
+      padding: 0 20px;
+      float: left;
+      box-sizing: border-box;
+      &.x-50 
+         width: 50%;
+      }
+      &.x-100 {
+         width: 100%;
+      }
+   }
+}
+
+.content-wrapper {
+   min-height: 100%;
+   position: relative;
+}
+
+.inscription {
+   
+   margin: 0 auto;
+   position: relative;
+   top: 50%;
+   
+  
+.title 
+     text-align: center;
+     font-family: Raleway, sans-serif;
+     letter-spacing: 3px;
+     font-size: 36px;
+     line-height: 48px;
+     padding-bottom: 48px;
+
+.contact-form 
+   .form-field 
+      position: relative;
+      margin: 32px 0;
+   }
+   .input-text {
+      display: block;
+      width: 100%;
+      height: 36px;
+      border-width: 0 0 2px 0;
+      border-color: #000;
+      font-family: Lusitana, serif;
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 400;
+      
+      &:focus 
+         outline: none;
+      }
+      
+      &:focus,
+      &.not-empty {
+         + .label 
+            transform: translateY(-24px);
+         }
+      }
+   }
+   .label {
+      position: absolute;
+      left: 20px;
+      bottom: 11px;
+      font-family: Lusitana, serif;
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 400;
+      color: #888;
+      cursor: text;
+      transition: transform .2s ease-in-out;
+   }
+   
+   .submit-btn {
+      display: inline-block;
+      background-color: #000;
+      color: #fff;
+      font-family: Raleway, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 8px 16px;
+      border: none;
+      cursor: pointer;
+   }
+}
+
+.note {
+   position: absolute;
+   left: 0;
+   bottom: 10px;
+   width: 100%;
+   text-align: center;
+   font-family: Lusitana, serif;
+   font-size: 16px;
+   line-height: 21px;
+   
+   
+   }
+}
